@@ -27,8 +27,8 @@ Este proyecto utiliza **YOLOv8** para detectar personas y prendas (`top`, `botto
 ---
 
 ## 🎥 Demo
-
-
+ 
+https://github.com/user-attachments/assets/18b93f2e-9503-4253-b177-a69822a6f1c6
 
 ---
 
