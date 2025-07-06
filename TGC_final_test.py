@@ -16,7 +16,7 @@ def get_dominant_color(img, k=1):
 model = YOLO("mi_yolov8_modelo.pt")  # tu modelo .pt entrenado
 
 # --- Abrir video o webcam ---
-cap = cv2.VideoCapture(0)  # o usa 0 para webcam
+cap = cv2.VideoCapture(0)
 
 while True:
     ret, frame = cap.read()
