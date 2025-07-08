@@ -13,10 +13,10 @@ def get_dominant_color(img, k=1):
     return tuple(color)
 
 # --- Cargar modelo entrenado ---
-model = YOLO("mi_yolov8_modelo.pt")  # tu modelo .pt entrenado
+model = YOLO("models/clothing_freeze10.pt")  # tu modelo .pt entrenado
 
 # --- Abrir video o webcam ---
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("videos/street2.mp4")
 
 while True:
     ret, frame = cap.read()
