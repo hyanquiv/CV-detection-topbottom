@@ -2,44 +2,67 @@
 import numpy as np
 from ultralytics import YOLO
 from sklearn.cluster import KMeans
+import pandas as pd
+from sklearn.metrics import pairwise_distances_argmin_min
+
+# --- Cargar diccionario de colores desde CSV ---
+df_colors = pd.read_csv("color_dictionary.csv")
+
+# --- Función para encontrar color más cercano ---
+def match_color(rgb_tuple):
+    color_vectors = df_colors[["R", "G", "B"]].values
+    closest_idx, _ = pairwise_distances_argmin_min([rgb_tuple], color_vectors)
+    return df_colors.iloc[closest_idx[0]]["name"]
 
 # --- Función para obtener el color dominante ---
 def get_dominant_color(img, k=1):
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     img = img.reshape((-1, 3))
-    kmeans = KMeans(n_clusters=k)
+    kmeans = KMeans(n_clusters=k, n_init=10)
     kmeans.fit(img)
     color = kmeans.cluster_centers_[0].astype(int)
     return tuple(color)
 
 # --- Cargar modelo entrenado ---
-model = YOLO("models/clothing_freeze10.pt")  # tu modelo .pt entrenado
+model = YOLO("models/model_final_v1.pt")
 
 # --- Abrir video o webcam ---
-cap = cv2.VideoCapture("videos/street2.mp4")
+#cap = cv2.VideoCapture("videos/street2.mp4")
+cap = cv2.VideoCapture(0)
+
+label_map = {0: "person", 1: "top", 2: "bottom"}
 
 while True:
     ret, frame = cap.read()
     if not ret:
         break
 
-    results = model(frame)[0]
+    results = model(frame, iou=0.10, conf=0.6)[0]
 
     for box, cls in zip(results.boxes.xyxy, results.boxes.cls):
         x1, y1, x2, y2 = map(int, box)
         class_id = int(cls)
 
-        label = ["top", "bottom", "exposed"][class_id]
+        if class_id not in label_map:
+            continue
+
+        label = label_map[class_id]
         roi = frame[y1:y2, x1:x2]
 
-        if label != "exposed" and roi.size > 0:
-            color = get_dominant_color(roi)
-            color_text = f"RGB({color[0]},{color[1]},{color[2]})"
-        else:
-            color_text = ""
+        color_text = ""
+        if label in ["top", "bottom"] and roi.size > 0:
+            h, w, _ = roi.shape
+            margin_x = int(w * 0.25)
+            margin_y = int(h * 0.25)
+            cropped_roi = roi[margin_y:h - margin_y, margin_x:w - margin_x]
 
-        cv2.rectangle(frame, (x1, y1), (x2, y2), (255,0,0), 2)
-        cv2.putText(frame, f"{label} {color_text}", (x1, y1 - 10),
+            if cropped_roi.size > 0:
+                color = get_dominant_color(cropped_roi)
+                color_name = match_color(color)
+                color_text = f" {color_name}"
+
+        cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 0, 0), 2)
+        cv2.putText(frame, f"{label}{color_text}", (x1, y1 - 10),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 2)
 
     cv2.imshow("Detección de prendas + color", frame)

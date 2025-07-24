@@ -1,0 +1,140 @@
+name,hex,R,G,B
+granate,#800000,128,0,0
+rojo oscuro,#8B0000,139,0,0
+marrón,#A52A2A,165,42,42
+ladrillo refractario,#B22222,178,34,34
+carmesí,#DC143C,220,20,60
+rojo,#FF0000,255,0,0
+tomate,#FF6347,255,99,71
+coral,#FF7F50,255,127,80
+rojo indio,#CD5C5C,205,92,92
+coral claro,#F08080,240,128,128
+salmón oscuro,#E9967A,233,150,122
+salmón,#FA8072,250,128,114
+salmón claro,#FFA07A,255,160,122
+rojo naranja,#FF4500,255,69,0
+naranja oscuro,#FF8C00,255,140,0
+naranja,#FFA500,255,165,0
+oro,#FFD700,255,215,0
+varilla de oro oscuro,#B8860B,184,134,11
+vara de oro,#DAA520,218,165,32
+vara de oro pálido,#EEE8AA,238,232,170
+caqui oscuro,#BDB76B,189,183,107
+caqui,#F0E68C,240,230,140
+aceituna,#808000,128,128,0
+amarillo,#FFFF00,255,255,0
+amarillo verde,#9ACD32,154,205,50
+verde oliva oscuro,#556B2F,85,107,47
+verde oliva,#6B8E23,107,142,35
+césped verde,#7CFC00,124,252,0
+reutilización de gráficos,#7FFF00,127,255,0
+verde amarillo,#ADFF2F,173,255,47
+verde oscuro,#006400,0,100,0
+verde,#008000,0,128,0
+bosque verde,#228B22,34,139,34
+Lima,#00FF00,0,255,0
+verde lima,#32CD32,50,205,50
+verde claro,#90EE90,144,238,144
+Verde pálido,#98FB98,152,251,152
+verde mar oscuro,#8FBC8F,143,188,143
+verde primavera medio,#00FA9A,0,250,154
+primavera verde,#00FF7F,0,255,127
+Mar verde,#2E8B57,46,139,87
+agua marina mediana,#66CDAA,102,205,170
+verde mar medio,#3CB371,60,179,113
+verde mar claro,#20B2AA,32,178,170
+gris pizarra oscuro,#2F4F4F,47,79,79
+verde azulado,#008080,0,128,128
+cian oscuro,#008B8B,0,139,139
+agua,#00FFFF,0,255,255
+cian,#00FFFF,0,255,255
+cian claro,#E0FFFF,224,255,255
+turquesa oscuro,#00CED1,0,206,209
+turquesa,#40E0D0,64,224,208
+turquesa medio,#48D1CC,72,209,204
+turquesa pálido,#AFEEEE,175,238,238
+agua marina,#7FFFD4,127,255,212
+azul pálido,#B0E0E6,176,224,230
+cadete azul,#5F9EA0,95,158,160
+azul acero,#4682B4,70,130,180
+flor de maiz azul,#6495ED,100,149,237
+cielo azul profundo,#00BFFF,0,191,255
+dodger azul,#1E90FF,30,144,255
+azul claro,#ADD8E6,173,216,230
+cielo azul,#87CEEB,135,206,235
+cielo azul claro,#87CEFA,135,206,250
+azul medianoche,#191970,25,25,112
+Armada,#000080,0,0,128
+azul oscuro,#00008B,0,0,139
+azul medio,#0000CD,0,0,205
+azul,#0000FF,0,0,255
+azul real,#4169E1,65,105,225
+Violeta Azul,#8A2BE2,138,43,226
+índigo,#4B0082,75,0,130
+azul pizarra oscuro,#483D8B,72,61,139
+azul pizarra,#6A5ACD,106,90,205
+azul pizarra medio,#7B68EE,123,104,238
+morado medio,#9370DB,147,112,219
+magenta oscuro,#8B008B,139,0,139
+Violeta oscuro,#9400D3,148,0,211
+orquídea oscura,#9932CC,153,50,204
+orquídea mediana,#BA55D3,186,85,211
+púrpura,#800080,128,0,128
+cardo,#D8BFD8,216,191,216
+ciruela,#DDA0DD,221,160,221
+Violeta,#EE82EE,238,130,238
+magenta / fucsia,#FF00FF,255,0,255
+orquídea,#DA70D6,218,112,214
+rojo violeta medio,#C71585,199,21,133
+rojo violeta pálido,#DB7093,219,112,147
+Rosa profundo,#FF1493,255,20,147
+Rosa caliente,#FF69B4,255,105,180
+Rosa claro,#FFB6C1,255,182,193
+rosado,#FFC0CB,255,192,203
+blanco antiguo,#FAEBD7,250,235,215
+beige,#F5F5DC,245,245,220
+sopa de mariscos,#FFE4C4,255,228,196
+almendra blanqueada,#FFEBCD,255,235,205
+trigo,#F5DEB3,245,222,179
+seda de maiz,#FFF8DC,255,248,220
+gasa de limón,#FFFACD,255,250,205
+barra de oro claro amarillo,#FAFAD2,250,250,210
+amarillo claro,#FFFFE0,255,255,224
+silla de montar marrón,#8B4513,139,69,19
+tierra de siena,#A0522D,160,82,45
+chocolate,#D2691E,210,105,30
+Perú,#CD853F,205,133,63
+marrón arena,#F4A460,244,164,96
+madera corpulenta,#DEB887,222,184,135
+bronceado,#D2B48C,210,180,140
+marrón rosado,#BC8F8F,188,143,143
+mocasín,#FFE4B5,255,228,181
+blanco navajo,#FFDEAD,255,222,173
+melocotón,#FFDAB9,255,218,185
+rosa brumosa,#FFE4E1,255,228,225
+rubor lavanda,#FFF0F5,255,240,245
+lino,#FAF0E6,250,240,230
+encaje antiguo,#FDF5E6,253,245,230
+látigo de papaya,#FFEFD5,255,239,213
+concha de mar,#FFF5EE,255,245,238
+crema de menta,#F5FFFA,245,255,250
+gris pizarra,#708090,112,128,144
+gris pizarra claro,#778899,119,136,153
+azul acero claro,#B0C4DE,176,196,222
+lavanda,#E6E6FA,230,230,250
+blanco floral,#FFFAF0,255,250,240
+Alice azul,#F0F8FF,240,248,255
+fantasma blanco,#F8F8FF,248,248,255
+gotas de miel,#F0FFF0,240,255,240
+Marfil,#FFFFF0,255,255,240
+azur,#F0FFFF,240,255,255
+nieve,#FFFAFA,255,250,250
+negro,#000000,0,0,0
+gris tenue,#696969,105,105,105
+gris,#808080,128,128,128
+gris oscuro,#A9A9A9,169,169,169
+plata,#C0C0C0,192,192,192
+gris claro,#D3D3D3,211,211,211
+Gainsboro,#DCDCDC,220,220,220
+humo blanco,#F5F5F5,245,245,245
+blanco,#FFFFFF,255,255,255
