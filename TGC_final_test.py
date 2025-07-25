@@ -1,4 +1,5 @@
-﻿import cv2
+﻿from asyncio import sleep
+import cv2
 import numpy as np
 from ultralytics import YOLO
 import pandas as pd
@@ -44,11 +45,12 @@ cap = cv2.VideoCapture("videos/street.mp4")
 #cap = cv2.VideoCapture(0)
 
 while True:
+    sleep(1)
     ret, frame = cap.read()
     if not ret:
         break
 
-    detections = person_model(frame, iou=0.5, conf=0.5)[0]
+    detections = person_model(frame, iou=0.5, conf=0.4)[0]
 
     for box, cls in zip(detections.boxes.xyxy, detections.boxes.cls):
         if int(cls) != 0:
